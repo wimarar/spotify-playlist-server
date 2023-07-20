@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wimar's Playlist</title>
+   <style>
+  
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 10px;
+      background-color: #000000;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 27px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+    h1 {
+      color: #1DB954;
+    }
+    
+    .song-list {
+      margin-bottom: 10px;
+      background-color: #3d3c3c;
+      padding: 12px;
+      border-radius: 2px;
+    }
+    
+    .song-list h2 {
+      color: #1DB954;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    
+    .song-list ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    .song-list li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .song-list li .song-title {
+      color: #fffdfd;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    
+    .song-list li .artist {
+      color: #a5a5a5;
+      font-size: 14px;
+    }
+    
+    .most-played {
+      margin-bottom: 10px;
+      background-color: #3d3c3c;
+      padding: 10px;
+      border-radius: 2px;
+    }
+    
+    .most-played h2 {
+      color: #1DB954;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    
+    .most-played ol {
+      list-style-type: decimal;
+      padding-left: 20px;
+    }
+    
+    .most-played li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .most-played li .song-title {
+      color: #fffdfd;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    
+    .most-played li .artist {
+      color: #a5a5a5;
+      font-size: 14px;
+    }
+    
+    .add-to-playlist {
+      margin-bottom: 10px;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 2px;
+    }
+    
+    .add-to-playlist h2 {
+      color: #1DB954;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    
+    .add-to-playlist form {
+      display: flex;
+      margin-bottom: 10px;
+    }
+    
+    .add-to-playlist input[type="text"] {
+      flex: 1;
+      padding: 5px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    
+    .add-to-playlist input[type="submit"] {
+      padding: 5px 10px;
+      background-color: #1DB954;
+      color: #fff;
+      border: none;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .play-count {
+      font-size: 10px;
+      padding: 7px;
+    }
+    .featured-image{
+        width: 11%;
+        max-height: 26%;
+        position: relative;
+        top: 120px;
+        left: -280px;
+    }
+    footer {
+    padding: 10px;
+    color: #fff;
+    background-color: #1DB954;
+    
+  }
+
+   
+    
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Logo Spotify.png" class="featured-image">
+    <h1>Wimar's Spotify</h1>
+    
+  </header>
+  
+  <section class="song-list">
+    <h2>Show All Songs</h2>
+    <ul>
+      <li>
+        <span class="song-title">Engkau Cintanya Aku</span>
+        <span class="artist">Brisia jodie, Arsy Widianto</span>
+        <span class="play-count">30 Plays</span>
+        <button onclick="playSong(1)">Play</button>
+        
+      </li>
+      <li>
+        <span class="song-title">Monokrom</span>
+        <span class="artist">Tulus</span>
+        <span class="play-count">20 Plays</span>
+        <button onclick="playSong(1)">Play</button>
+      </li>
+      <li>
+        <span class="song-title">Surat Cinta Untuk Starla</span>
+        <span class="artist">Virgoun</span>
+        <span class="play-count">28 Plays</span>
+        <button onclick="playSong(1)">Play</button>
+      </li>
+      <li>
+        <span class="song-title">First Rabbit</span>
+        <span class="artist">JKT48</span>
+        <span class="play-count">20 Plays</span>
+        <button onclick="playSong(1)">Play</button>
+      </li>
+      <li>
+        <span class="song-title">Heavy Rotation</span>
+        <span class="artist">JKT48</span>
+        <span class="play-count">19 Plays</span>
+        <button onclick="playSong(1)">Play</button>
+      </li>
+      <li>
+        <span class="song-title">Kangen</span>
+        <span class="artist">Dewa 19</span>
+        <span class="play-count">22 Plays</span>
+        <button onclick="playSong(1)">Play</button>
+      </li>
+      <li>
+        <span class="song-title">Kenangan Terindah</span>
+        <span class="artist">Samsons</span>
+        <span class="play-count">18 Plays</span>
+        <button onclick="playSong(1)">Play</button>
+      </li>
+      <li>
+        <span class="song-title">My Love</span>
+        <span class="artist">Westlife</span>
+        <span class="play-count">17 Plays</span>
+        <button onclick="playSong(1)">Play</button>
+      </li>
+      <li>
+        <span class="song-title">Beautiful in White</span>
+        <span class="artist">Shane Filan</span>
+        <span class="play-count">15 Plays</span>
+        <button onclick="playSong(1)">Play</button>
+      </li>
+    </ul>
+  </section>
+  
+  <section class="most-played">
+    <h2> Most Played Songs</h2>
+    <ol>
+        <li>
+            <span class="song-title">Engkau Cintanya Aku</span>
+            <span class="artist">Brisia Jodie, Arsy Widianto</span>
+            <span class="play-count">30 Plays</span>
+        </li>
+        <li>
+            <span class="song-title">Surat Cinta Untuk Starla</span>
+            <span class="artist">Virgoun</span>
+            <span class="play-count">28 Plays</span>
+        </li>
+        <li>
+            <span class="song-title">Kangen"</span>
+            <span class="artist">Dewa 19</span>
+            <span class="play-count">22 Plays</span>
+        </li>
+    </ol>
+    </section>
+    <section class="add-to-playlist">
+    <h2>Add Songs to Your Playlist</h2>
+    <form>
+      <input type="text" placeholder="Song Title">
+      <input type="text" placeholder="Artist">
+      <input type="button" value="Add" onclick="addToPlaylist()">
+    </form>
+  </section>
+  <script>
+    
+    function playSong(id) {
+      fetch(`/api/playlist/${id}/play`, { method: 'PUT' })
+        .then(response => response.json())
+        .then(song => {
+          console.log(`${song.title} - ${song.artist} played.`);
+       
+          location.reload();
+        })
+        .catch(error => console.error('Error playing the song:', error));
+    }
+  
+    
+    function addToPlaylist() {
+      const title = document.getElementById('title').value;
+      const artist = document.getElementById('artist').value;
+      fetch('/api/playlist', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ title, artist }),
+      })
+        .then(response => response.json())
+        .then(newSong => {
+          console.log(`${newSong.title} - ${newSong.artist} added to the playlist.`);
+          
+          location.reload();
+        })
+        .catch(error => console.error('Error adding the song:', error));
+    }
+
+    function getSongById(id) {
+    fetch(`/api/playlist/${id}`)
+      .then(response => response.json())
+      .then(song => {
+        console.log(`${song.title} - ${song.artist}`);
+      })
+      .catch(error => console.error('Error fetching the song:', error));
+  }
+  
+  function getMostPlayedSongs() {
+    const mostPlayedSongs = document.querySelectorAll('.most-played li');
+    mostPlayedSongs.forEach(song => {
+      const title = song.querySelector('.song-title').textContent;
+      const artist = song.querySelector('.artist').textContent;
+      console.log(`${title} - ${artist}`);
+    });
+  }
+</script>
+  </script>
+    </body>
+    <footer>
+      <p>Wimar Abdurrachman &#169; 2023 </p>
+    </footer>
+</html>
